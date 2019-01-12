@@ -1,4 +1,4 @@
-# java8-functional-programming
+# java8-functional-programming [![BCH compliance](https://bettercodehub.com/edge/badge/DzCorps/java8-functional-programming?branch=master)](https://bettercodehub.com/)
 
 This repository contains examples of functional programming under java8
 

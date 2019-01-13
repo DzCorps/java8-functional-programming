@@ -4,6 +4,7 @@ import models.Animal;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 /**
@@ -45,9 +46,10 @@ public class FindMatchingAnimals {
         System.out.println("JAVA7 filtered list: " + java7FilteredAnimals.toString());
 
         // with JAVA8, we stream -> add a predicate -> DONE :)
+        final Predicate<Animal> predicate = animal -> "kangarou".equals(animal.getSpecies());
         final List<Animal> collect = animals
                 .stream()
-                .filter(animal -> "kangarou".equals(animal.getSpecies()))
+                .filter(predicate)
                 .collect(Collectors.toList());
         System.out.println("JAVA8 filtered list: " + collect.toString());
     }
